@@ -36,9 +36,10 @@ var HeroDetailComponent = (function () {
             template: "\n      <div *ngIf=\"selectedHero\">\n        <h2>\n          {{selectedHero.name | uppercase}} is my hero\n        </h2>\n        <button (click)=\"gotoDetail()\">View Details</button>\n      </div>\n  ",
             styleUrls: ['app/hero-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
+        __metadata('design:paramtypes', [hero_service_1.HeroService, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object, (typeof (_b = typeof common_1.Location !== 'undefined' && common_1.Location) === 'function' && _b) || Object])
     ], HeroDetailComponent);
     return HeroDetailComponent;
+    var _a, _b;
 }());
 exports.HeroDetailComponent = HeroDetailComponent;
 //# sourceMappingURL=hero-detail.component.js.map
