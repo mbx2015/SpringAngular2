@@ -8,15 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var heroes_component_1 = require('./heroes.component');
-var dashboard_component_1 = require('./dashboard.component');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var app_component_1 = require("./app.component");
+var heroes_component_1 = require("./heroes.component");
+var dashboard_component_1 = require("./dashboard.component");
 var hero_detail_component_1 = require("./hero-detail.component");
-var hero_service_1 = require('./hero.service');
+var hero_service_1 = require("./hero.service");
 var AppModule = (function () {
     function AppModule() {
     }

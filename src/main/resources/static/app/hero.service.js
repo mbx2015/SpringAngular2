@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by MBX on 10/7/2016.
  */
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var mock_heroes_1 = require("./mock-heroes");
 var HeroService = (function () {
     function HeroService() {
