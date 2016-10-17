@@ -17,6 +17,8 @@ var heroes_component_1 = require("./heroes.component");
 var dashboard_component_1 = require("./dashboard.component");
 var hero_detail_component_1 = require("./hero-detail.component");
 var hero_service_1 = require("./hero.service");
+var setting_component_1 = require("./setting.component");
+var http_1 = require("@angular/http");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,6 +27,7 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
+                http_1.HttpModule,
                 router_1.RouterModule.forRoot([
                     {
                         path: 'heroes',
@@ -33,6 +36,10 @@ var AppModule = (function () {
                     {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
+                    },
+                    {
+                        path: 'setting',
+                        component: setting_component_1.SettingComponent
                     },
                     {
                         path: '',
@@ -45,7 +52,7 @@ var AppModule = (function () {
                     },
                 ])
             ],
-            declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, dashboard_component_1.DashboardComponent],
+            declarations: [app_component_1.AppComponent, hero_detail_component_1.HeroDetailComponent, heroes_component_1.HeroesComponent, dashboard_component_1.DashboardComponent, setting_component_1.SettingComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [hero_service_1.HeroService]
         }), 

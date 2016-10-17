@@ -13,8 +13,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require("@angular/core");
 var mock_heroes_1 = require("./mock-heroes");
+var http_1 = require("@angular/http");
 var HeroService = (function () {
-    function HeroService() {
+    function HeroService(http) {
+        this.http = http;
     }
     HeroService.prototype.getHeroes = function () {
         return Promise.resolve(mock_heroes_1.HEROES);
@@ -30,9 +32,12 @@ var HeroService = (function () {
         return this.getHeroes()
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
+    HeroService.prototype.getUsers = function () {
+        return this.http.get("/users");
+    };
     HeroService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], HeroService);
     return HeroService;
 }());

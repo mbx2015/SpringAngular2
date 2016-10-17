@@ -5,3 +5,9 @@
         <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
 </ul>
+
+<ul class="heroes">
+    <li *ngFor="let user of users">
+        <span class="badge">{{user.id}}</span> {{user.login}}, {{user.password}}, {{user.active}}
+    </li>
+</ul>

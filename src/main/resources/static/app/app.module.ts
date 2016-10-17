@@ -7,11 +7,14 @@ import {HeroesComponent} from "./heroes.component";
 import {DashboardComponent} from "./dashboard.component";
 import {HeroDetailComponent} from "./hero-detail.component";
 import {HeroService} from "./hero.service";
+import {SettingComponent} from "./setting.component";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   imports:      [ 
     BrowserModule, 
     FormsModule,
+      HttpModule,
     RouterModule.forRoot([
       {
         path: 'heroes',
@@ -20,6 +23,10 @@ import {HeroService} from "./hero.service";
       {
         path: 'dashboard',
         component: DashboardComponent
+      },
+      {
+        path: 'setting',
+        component: SettingComponent
       },
       {
         path: '',
@@ -33,7 +40,7 @@ import {HeroService} from "./hero.service";
 
     ]) 
     ],
-  declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent],
+  declarations: [AppComponent, HeroDetailComponent, HeroesComponent, DashboardComponent, SettingComponent],
   bootstrap: [AppComponent],
   providers: [HeroService]
 })

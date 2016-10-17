@@ -22,12 +22,21 @@ var HeroesComponent = (function () {
     };
     HeroesComponent.prototype.ngOnInit = function () {
         this.getHeroes();
+        this.getUsers();
     };
     HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
     };
     HeroesComponent.prototype.gotoDetail = function () {
         this.router.navigate(['/detail', this.selectedHero.id]);
+    };
+    HeroesComponent.prototype.getUsers = function () {
+        var _this = this;
+        this.heroService.getUsers()
+            .subscribe(function (users) {
+            _this.users = JSON.parse(users._body);
+            console.log("users: " + users);
+        });
     };
     HeroesComponent = __decorate([
         core_1.Component({

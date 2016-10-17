@@ -4,9 +4,13 @@
 import {Injectable} from "@angular/core";
 import {Hero} from "./hero";
 import {HEROES} from "./mock-heroes";
+import {Http} from "@angular/http";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class HeroService {
+
+    constructor(private http: Http){}
 
 
     getHeroes(): Promise<Hero[]> {
@@ -24,6 +28,9 @@ export class HeroService {
                     .then(heroes => heroes.find(hero => hero.id === id));
     }
 
+    getUsers(): Observable<any> {
+        return this.http.get("/users");
+    }
 
 
 

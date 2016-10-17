@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// Keep the Input import for now, we'll remove it later:
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
@@ -33,7 +32,7 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-hero-detail',
-            template: "\n      <div *ngIf=\"selectedHero\">\n        <h2>\n          {{selectedHero.name | uppercase}} is my hero\n        </h2>\n        <button (click)=\"gotoDetail()\">View Details</button>\n      </div>\n  ",
+            templateUrl: 'app/hero-detail.component.html',
             styleUrls: ['app/hero-detail.component.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
